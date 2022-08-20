@@ -48,9 +48,8 @@ const renderSelect = categories => {
 
 document.getElementById('select').onchange = function(e) {
     if(e.currentTarget.value.length > 0) {
-        const category = products[category]
         filteredProducts = products.filter(function(product) {
-            return products.category.includes(e.currentTarget.value)
+            return product.category.includes(e.currentTarget.value)
         })
         renderProducts(filteredProducts);
         console.log(filteredProducts);
@@ -61,8 +60,4 @@ document.getElementById('select').onchange = function(e) {
 
 function showElement(categories) {
     console.log(categories)
-}
-
-const category = function(products) {
-    return {category: products.category}
 }
